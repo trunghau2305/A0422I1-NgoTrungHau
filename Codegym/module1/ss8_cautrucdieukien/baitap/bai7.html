@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Tính cước điện thoại
+    <input type="number" id="sophut">
+    <button onclick="result()">Tính</button>
+    <p id="tien"></p>
+    <script>
+        function result() {
+        let batbuoc = 2000
+        let p50 = 600
+        let p150= 400
+        let sau200p = 200
+        let d50p = 30000
+        let sophut = parseInt(document.getElementById("sophut").value)
+        if (sophut <= 50){
+            (document.getElementById("tien").innerText) = "tổng tiền" + (batbuoc + sophut*p50)
+        }else if (sophut > 50 && sophut <= 150) {
+            (document.getElementById("tien").innerText) = "tổng tiền" + ((sophut - 50)*p150 + d50p + batbuoc)
+        }else if (sophut > 200 ){
+            (document.getElementById("tien").innerText) = "tổng tiền" + ((sophut - 200)*sau200p + 150*p150 + 50 * p50 + batbuoc)
+        }else {
+        }
+    }
+    </script>
+</body>
+</html>
